@@ -13,7 +13,8 @@
 ### Tokenization
 
    Sử dụng tokenizer của mô hình Llama
-
+# 3. Training
+   Model được training trên kaggle với GPU T4 x 2, được lưu trên huggingface "calmm-m/summarization"
 
 ### Prompt Standardization
 
