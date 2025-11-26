@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Llama 3.1 News Summarizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1><span style="font-size: 1.5rem">🤖</span> Tóm Tắt Văn Bản Tự động</h1>
+      <div class="api-config">
+        <input
+          type="text"
+          id="apiUrl"
+          placeholder="Dán URL Ngrok từ Google Colab vào đây..."
+          value="https://gangliest-jeannine-nonrelatively.ngrok-free.dev"
+        />
+      </div>
+    </header>
+
+    <main>
+      <div class="col">
+        <label for="inputText">Văn bản gốc</label>
+        <textarea
+          id="inputText"
+          placeholder="Nhập văn bản tiếng Anh hoặc tiếng Việt cần tóm tắt vào đây..."
+        ></textarea>
+        <button id="submitBtn" class="btn-summarize" onclick="summarizeText()">
+          <div class="spinner" id="loadingSpinner"></div>
+          <span id="btnText">Tóm tắt văn bản</span>
+        </button>
+      </div>
+
+      <div class="col">
+        <label>Kết quả tóm tắt</label>
+        <div id="outputText" class="output-box">
+          <div class="placeholder">
+            <p>Kết quả sẽ hiển thị ở đây...</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
