@@ -1,7 +1,7 @@
 # Quá trình Fine-tuning cho dự án này
 
 # 1. Dataset
-   Chúng ta sử dụng bộ dữ liệu từ Hugging Face: đây là dữ liệu đã được làm sạch (https://huggingface.co/datasets/calmm-m/news-summarization)
+   Chúng ta sử dụng bộ dữ liệu từ Hugging Face: đây là dữ liệu đã được làm sạch (https://huggingface.co/datasets/calmm-m/summarization)
 
 # 2. Data Preparation Process
    Quy trình xử lý dữ liệu gồm 4 bước:
