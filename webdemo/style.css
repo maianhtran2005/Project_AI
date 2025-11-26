@@ -1,0 +1,279 @@
+:root {
+  /* Màu chủ đạo pastel */
+  --primary: #f472b6; /* hồng pastel */
+  --primary-hover: #ec5a9a;
+
+  /* Background gradient pastel hồng tím */
+  --bg: linear-gradient(135deg, #fbc2eb, #a6c1ee, #ffffff);
+
+  /* Header gradient pastel */
+  --header-bg: linear-gradient(90deg, #fbc2eb, #f9a8d4);
+
+  --surface: #ffffff;
+  --text: #3d3d3d;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+
+  /* Shadow nhẹ complement pastel */
+  --shadow-md: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+}
+
+body {
+  /* --- PHẦN CHỈNH SỬA TRANG TRÍ --- */
+  background-color: #fbc2eb; /* Màu nền dự phòng */
+
+  /* Lớp phủ họa tiết: Nơ, Trái tim, Hoa, Lấp lánh + Gradient gốc */
+  background-image: 
+    /* Icon 1: Nơ (Bow) */ url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 13C12.55 13 13 13.45 13 14C13 14.55 12.55 15 12 15C11.45 15 11 14.55 11 14C11 13.45 11.45 13 12 13ZM18.5 12C19.1 12 19.8 12.1 20.4 12.3C20.8 12.4 21.05 12.8 20.9 13.2L20.2 15.6C20.05 16 19.65 16.25 19.2 16.1L16.2 15.3C15.8 15.2 15.4 15.4 15.1 15.7C14.2 16.6 13.2 16.2 12.5 16C12.4 16.4 12.2 16.8 12 17.2C11.8 16.8 11.6 16.4 11.5 16C10.8 16.2 9.8 16.6 8.9 15.7C8.6 15.4 8.2 15.2 7.8 15.3L4.8 16.1C4.35 16.25 3.95 16 3.8 15.6L3.1 13.2C2.95 12.8 3.2 12.4 3.6 12.3C4.2 12.1 4.9 12 5.5 12C6.55 12 7.55 12.3 8.35 12.85C8.65 13.05 9 12.95 9.2 12.65L10.6 10.55C10.95 10.05 11.45 10 12 10C12.55 10 13.05 10.05 13.4 10.55L14.8 12.65C15 12.95 15.35 13.05 15.65 12.85C16.45 12.3 17.45 12 18.5 12Z' fill='%23ffffff' fill-opacity='0.5'/%3E%3C/svg%3E"),
+    /* Icon 2: Trái tim (Heart) */
+      url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%23ffffff' fill-opacity='0.4'/%3E%3C/svg%3E"),
+    /* Icon 3: Hoa (Flower) */
+      url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2C10.9 2 10 2.9 10 4s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-4 4C6.9 6 6 6.9 6 8s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z' fill='%23ffffff' fill-opacity='0.4'/%3E%3C/svg%3E"),
+    /* Icon 4: Lấp lánh (Sparkle) */
+      url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z' fill='%23ffffff' fill-opacity='0.6'/%3E%3C/svg%3E"),
+    /* Gradient gốc */ var(--bg);
+
+  /* Vị trí của các icon để tạo cảm giác rải rác ngẫu nhiên */
+  background-position: 0 0, /* Nơ */ 60px 60px,
+    /* Trái tim lệch đi */ 120px 20px, /* Hoa lệch đi */ 90px 90px,
+    /* Lấp lánh */ 0 0; /* Gradient nền */
+
+  /* Kích thước lặp lại của vùng chứa icon */
+  background-size: 200px 200px, /* Khoảng cách lặp lại Nơ */ 160px 160px,
+    /* Khoảng cách lặp lại Trái tim */ 240px 240px,
+    /* Khoảng cách lặp lại Hoa */ 180px 180px,
+    /* Khoảng cách lặp lại Lấp lánh */ 100% 100%; /* Gradient phủ kín */
+
+  background-repeat: repeat, repeat, repeat, repeat, no-repeat;
+  /* ----------------------------- */
+
+  color: var(--text);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER pastel gradient */
+header {
+  background: var(--header-bg);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Chỉnh nhẹ viền sáng hơn */
+  box-shadow: 0 4px 12px rgba(249, 168, 212, 0.35);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Decorate Header Title with a Bow Icon using pure CSS */
+h1::before {
+  content: "🎀";
+  margin-right: 8px;
+  font-size: 1.2em;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Input URL config */
+.api-config {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 500px;
+}
+
+.api-config input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  background: rgba(255, 255, 255, 0.9); /* Làm input trong hơn chút */
+}
+
+.api-config input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.25);
+}
+
+/* Main Layout */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Column */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Thêm icon trái tim bé xíu cạnh label */
+label::after {
+  content: "💖";
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Input & Output box */
+textarea,
+.output-box {
+  flex: 1;
+  width: 100%;
+  padding: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.6); /* Viền mềm mại hơn */
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.95); /* Hơi trong suốt để thấy nền */
+  box-shadow: var(--shadow-md);
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+  min-height: 200px;
+  backdrop-filter: blur(5px); /* Hiệu ứng kính mờ trendy */
+}
+
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.15);
+  transform: translateY(-2px);
+}
+
+.output-box {
+  background-color: #fff9fc; /* Màu nền hộp output hồng cực nhạt */
+  white-space: pre-wrap;
+  overflow-y: auto;
+}
+
+.placeholder {
+  color: #b9b9b9;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-style: italic;
+}
+
+/* Button pastel */
+.btn-summarize {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px; /* Bo tròn nút nhiều hơn cho dễ thương */
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 15px rgba(244, 114, 182, 0.45);
+}
+
+.btn-summarize:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(244, 114, 182, 0.55);
+}
+
+.btn-summarize:active {
+  transform: translateY(1px);
+}
+
+.btn-summarize:disabled {
+  background-color: #d1d1d1;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Spinner */
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 3px solid white;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: none;
+}
+
+.btn-summarize:disabled .spinner {
+  display: block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  textarea,
+  .output-box {
+    min-height: 350px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .api-config {
+    max-width: none;
+  }
+}
